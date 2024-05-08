@@ -1,0 +1,52 @@
+html, body
+{
+    
+    margin: 0;
+    padding: 0;
+    background-image: url('poze/Histordle\ \(11\).jpg');
+    background-size: COVER, contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.year-list-container {
+    position: absolute;
+    top:35%;
+    left: 78%;
+    width: 150px; /* Lățimea fixă a containerului */
+    height: 350px; /* Înălțimea fixă a containerului */
+    overflow-y: auto; /* Permite derularea verticală */
+    border-radius: 5px;
+    padding: 10px;
+    display: none; /* Inițial ascunsă */
+}
+
+/* Stilurile pentru butoanele cu ani */
+.year-button {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    font-size: 50px;
+    background-color:#F5EDD9;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.year-image {
+    position: absolute;
+    display: none; 
+    max-width: 100%;
+    height: auto;
+    top: 30%;
+    left: 20%;
+    margin-top: 10px;
+}
+.custom-button
+{
+    
+    position: absolute;
+    top: 8%;
+    left: 65%;
+}

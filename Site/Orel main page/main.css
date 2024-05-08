@@ -1,0 +1,28 @@
+html, body
+{
+    
+    margin: 0;
+    padding: 0;
+    background-image: url('poze/Histordle\ \(5\).jpg');
+    background-size: COVER, contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.start
+{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s ease; 
+}
+
+.start:hover {
+    opacity: 1; 
+    transform: scale(1.3);
+}

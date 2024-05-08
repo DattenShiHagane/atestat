@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="second.css">
+    </head>
+    <body>
+
+<!-- Butonul care afișează și ascunde lista de ani -->
+<div class="custom-button" onclick="toggleYearList()"> <img src="poze/Histordle__10_-removebg-preview (1).png"></div>
+
+<!-- Containerul listei cu derulare -->
+<div class="year-list-container" id="yearList">
+    <!-- Lista cu ani și butoane asociate -->
+    <button class="year-button" onclick="showImage('1492')">1492</button>
+    <button class="year-button" onclick="showImage('1550')">1550</button>
+    <button class="year-button" onclick="showImage('1600')">1600</button>
+    <button class="year-button" onclick="showImage('1660')">1660</button>
+    <button class="year-button" onclick="showImage('1754')">1754</button>
+    <button class="year-button" onclick="showImage('1800')">1800</button>
+    <button class="year-button" onclick="showImage('1812')">1812</button>
+    <button class="year-button" onclick="showImage('1938')">1938</button>
+    <button class="year-button" onclick="showImage('1945')">1945</button>
+    <button class="year-button" onclick="showImage('1959')">1959</button>
+    <button class="year-button" onclick="showImage('1974')">1974</button>
+    <button class="year-button" onclick="showImage('1975')">1975</button>
+    <button class="year-button" onclick="showImage('2007')">2007</button>
+</div>
+
+<!-- Imaginile asociate fiecărui an -->
+<img src="harti/Colonisation_1492-removebg-preview.png" class="year-image" id="img_1492">
+<img src="harti/Colonisation_1550-removebg-preview.png" class="year-image" id="img_1550">
+<img src="harti/800px-Colonisation_1600-removebg-preview.png" class="year-image" id="img_1600">
+<img src="harti/Colonisation_1660-removebg-preview.png" class="year-image" id="img_1660">
+<img src="harti/Colonisation_1754-removebg-preview.png" class="year-image" id="img_1754">
+<img src="harti/Colonial_empires_in_1800.svg-removebg-preview.png" class="year-image" id="img_1800">
+<img src="harti/Colonisation_1812-removebg-preview.png" class="year-image" id="img_1812">
+<img src="harti/800px-Colonisation_1938-removebg-preview (1).png" class="year-image" id="img_1938">
+<img src="harti/800px-Colonization_1945-removebg-preview.png" class="year-image" id="img_1945">
+<img src="harti/Colonisation_1959-removebg-preview.png" class="year-image" id="img_1959">
+<img src="harti/Colonisation_1974-removebg-preview.png" class="year-image" id="img_1974">
+<img src="harti/World_1975_empires_colonies_territory-removebg-preview.png" class="year-image" id="img_1975">
+<img src="harti/800px-Colonisation_2007-removebg-preview.png" class="year-image" id="img_2007">
+
+<script>
+    // Funcția care afișează și ascunde lista de ani
+    function toggleYearList() {
+        var yearList = document.getElementById("yearList");
+        if (yearList.style.display === "none") {
+            yearList.style.display = "block";
+        } else {
+            yearList.style.display = "none";
+        }
+    }
+
+    // Funcția care afișează imaginea asociată anului selectat
+    function showImage(year) {
+        // Ascunde toate imaginile
+        var images = document.getElementsByClassName("year-image");
+        for (var i = 0; i < images.length; i++) {
+            images[i].style.display = "none";
+        }
+        // Afișează imaginea asociată anului selectat
+        var imageToShow = document.getElementById("img_" + year);
+        if (imageToShow) {
+            imageToShow.style.display = "block";
+        }
+    }
+</script>
+    </body>
+</html>
